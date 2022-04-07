@@ -419,10 +419,12 @@ $usersDayAndMonth = $usersDay . '.' . $usersMonth;
 
 foreach ($zodiacsArray as $zodiacName => $dates) {
     if (in_array($usersDayAndMonth, $dates)) {
+
         echo 'Ваш знак зодиака: ' . $zodiacName . PHP_EOL;
         break;
     }
 }
+
 echo 'До новых встреч!' . PHP_EOL;
 
 function checkDay($usersDay)
@@ -435,6 +437,7 @@ function checkDay($usersDay)
     } elseif ($usersDay < 1 || $usersDay > 31) {
         return 'Введите число от 1 до 31' . PHP_EOL;
     }
+
     return null;
 }
 
@@ -447,5 +450,6 @@ function checkMonth($usersMonth)
     } elseif ($usersMonth < 1 || $usersMonth > 12) {
         return 'Введите число от 1 до 12' . PHP_EOL;
     }
+
     return null;
 }
